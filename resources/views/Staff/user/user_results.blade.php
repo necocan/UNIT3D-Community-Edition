@@ -44,7 +44,7 @@
                         <thead>
                             <tr>
                                 <th class="hidden-xs hidden-sm"></th>
-                                <th>@lang('common.name') /  @lang('common.group')</th>
+                                <th>@lang('common.name') / @lang('common.group')</th>
                                 <th class="hidden-xs hidden-sm">E-Mail</th>
                                 <th>ID</th>
                                 <th>@lang('user.settings')</th>

@@ -50,7 +50,7 @@
                 <input type="text" class="form-control" id="uploader" name="uploader"
                     placeholder="@lang('torrent.torrent') @lang('torrent.uploader')">
             </div>
-    
+
             <div class="form-group">
                 <label for="imdb">ID</label>
                 <input type="text" class="form-control" id="imdb" name="imdb" placeholder="IMDB #">
@@ -60,7 +60,7 @@
                     placeholder="TMDB #">
                 <label for="mal"></label><input type="text" class="form-control" id="mal" name="mal" placeholder="MAL #">
             </div>
-    
+
             <div class="form-group">
                 <label for="category">@lang('torrent.category')</label>
                 <div>
@@ -93,7 +93,8 @@
                     @foreach ($torrent_repository->resolutions() as $id => $resolution)
                         <span class="badge-user">
                             <label class="inline">
-                                <input type="checkbox" id="{{ $resolution }}" value="{{ $id }}" class="resolution" name="resolutions[]">
+                                <input type="checkbox" id="{{ $resolution }}" value="{{ $id }}" class="resolution"
+                                    name="resolutions[]">
                                 {{ $resolution }}
                             </label>
                         </span>
@@ -139,7 +140,7 @@
                     </span>
                 </div>
             </div>
-    
+
             <div class="form-group">
                 <label for="type">@lang('torrent.special')</label>
                 <div>
@@ -173,7 +174,7 @@
                     </span>
                 </div>
             </div>
-    
+
             <div class="form-group">
                 <label for="type">@lang('torrent.health')</label>
                 <div>

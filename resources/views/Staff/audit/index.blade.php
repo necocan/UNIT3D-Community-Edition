@@ -43,7 +43,7 @@
                     <tbody>
                         @if ($audits->count())
                             @foreach ($audits as $audit)
-                            @php $values = json_decode($audit->record, true); @endphp
+                                @php $values = json_decode($audit->record, true); @endphp
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ strtoupper($audit->action) }}</td>
@@ -56,8 +56,7 @@
                                     </td>
                                     <td>
                                         @foreach ($values as $key => $value)
-                                            <span class="badge badge-extra">{{ $key }}:</span> {{ $value['old'] }} &rarr;
-                                            {{ $value['new'] }}<br>
+                                            <span class="badge badge-extra">{{ $key }}:</span> {{ $value['old'] }} &rarr; {{ $value['new'] }}<br>
                                         @endforeach
                                     </td>
                                     <td>

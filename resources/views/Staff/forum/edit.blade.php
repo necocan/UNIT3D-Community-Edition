@@ -24,7 +24,7 @@
 @section('content')
     <div class="container box">
         <h2>@lang('common.edit'): {{ $forum->name }}</h2>
-    
+
         <form role="form" method="POST" action="{{ route('staff.forums.update', ['id' => $forum->id]) }}">
             @csrf
             <div class="form-group">
@@ -33,14 +33,15 @@
                     <input type="text" name="title" class="form-control" value="{{ $forum->name }}">
                 </label>
             </div>
-    
+
             <div class="form-group">
                 <label for="description">Description</label>
                 <label>
-                    <textarea name="description" class="form-control" cols="30" rows="10">{{ $forum->description }}</textarea>
+                    <textarea name="description" class="form-control" cols="30"
+                        rows="10">{{ $forum->description }}</textarea>
                 </label>
             </div>
-    
+
             <div class="form-group">
                 <label for="forum_type">Forum Type</label>
                 <label>
@@ -50,7 +51,7 @@
                     </select>
                 </label>
             </div>
-    
+
             <div class="form-group">
                 <label for="parent_id">Parent forum</label>
                 <label>
@@ -64,7 +65,7 @@
                     </select>
                 </label>
             </div>
-    
+
             <div class="form-group">
                 <label for="position">@lang('common.position')</label>
                 <label>
@@ -72,7 +73,7 @@
                         value="{{ $forum->position }}">
                 </label>
             </div>
-    
+
             <h3>Permissions</h3>
             <table class="table table-striped">
                 <thead>
@@ -136,7 +137,7 @@
                     @endforeach
                 </tbody>
             </table>
-    
+
             <button type="submit" class="btn btn-default">Save Forum</button>
         </form>
     </div>

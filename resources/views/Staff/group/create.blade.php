@@ -47,7 +47,7 @@
                                 <th>Autogroup</th>
                             </tr>
                         </thead>
-    
+
                         <tbody>
                             <tr>
                                 <td>

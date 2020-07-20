@@ -25,7 +25,7 @@
     <div class="container">
         <h1 class="title">
             <i class="{{ config('other.font-awesome') }} fa-gear"></i>
-                @lang('common.edit') @lang('common.user')
+            @lang('common.edit') @lang('common.user')
             <a href="{{ route('users.show', ['username' => $user->username]) }}">{{ $user->username }}</a>
         </h1>
         <ul class="nav nav-tabs" role="tablist">
@@ -118,11 +118,11 @@
                     @csrf
                     <label for="hidden" class="control-label">@lang('user.can-upload')?</label>
                     <div class="radio-inline">
-                    <label><input type="radio" name="can_upload" @if ($user->can_upload == 1) checked @endif
+                        <label><input type="radio" name="can_upload" @if ($user->can_upload == 1) checked @endif
                             value="1">@lang('common.yes')</label>
                     </div>
                     <div class="radio-inline">
-                    <label><input type="radio" name="can_upload" @if ($user->can_upload == 0) checked @endif
+                        <label><input type="radio" name="can_upload" @if ($user->can_upload == 0) checked @endif
                             value="0">@lang('common.no')</label>
                     </div>
                     <br>
@@ -140,33 +140,33 @@
                     <br>
                     <label for="hidden" class="control-label">@lang('user.can-comment')?</label>
                     <div class="radio-inline">
-                    <label><input type="radio" name="can_comment" @if ($user->can_comment == 1) checked @endif
+                        <label><input type="radio" name="can_comment" @if ($user->can_comment == 1) checked @endif
                             value="1">@lang('common.yes')</label>
                     </div>
                     <div class="radio-inline">
-                    <label><input type="radio" name="can_comment" @if ($user->can_comment == 0) checked @endif
+                        <label><input type="radio" name="can_comment" @if ($user->can_comment == 0) checked @endif
                             value="0">@lang('common.no')</label>
                     </div>
                     <br>
                     <br>
                     <label for="hidden" class="control-label">@lang('user.can-invite')?</label>
                     <div class="radio-inline">
-                    <label><input type="radio" name="can_invite" @if ($user->can_invite == 1) checked @endif
+                        <label><input type="radio" name="can_invite" @if ($user->can_invite == 1) checked @endif
                             value="1">@lang('common.yes')</label>
                     </div>
                     <div class="radio-inline">
-                    <label><input type="radio" name="can_invite" @if ($user->can_invite == 0) checked @endif
+                        <label><input type="radio" name="can_invite" @if ($user->can_invite == 0) checked @endif
                             value="0">@lang('common.no')</label>
                     </div>
                     <br>
                     <br>
                     <label for="hidden" class="control-label">@lang('user.can-request')?</label>
                     <div class="radio-inline">
-                    <label><input type="radio" name="can_request" @if ($user->can_request == 1) checked @endif
+                        <label><input type="radio" name="can_request" @if ($user->can_request == 1) checked @endif
                             value="1">@lang('common.yes')</label>
                     </div>
                     <div class="radio-inline">
-                    <label><input type="radio" name="can_request" @if ($user->can_request == 0) checked @endif
+                        <label><input type="radio" name="can_request" @if ($user->can_request == 0) checked @endif
                             value="0">@lang('common.no')</label>
                     </div>
                     <br>
@@ -202,7 +202,8 @@
                     <button type="submit" class="btn btn-primary">@lang('common.save')</button>
                 </form>
                 <hr>
-                <h2>@lang('user.note')<span class="text-blue"><strong><i class="{{ config('other.font-awesome') }} fa-note"></i>
+                <h2>@lang('user.note')<span class="text-blue"><strong><i
+                                class="{{ config('other.font-awesome') }} fa-note"></i>
                             {{ $notes->count() }} </strong></span></h2>
                 <table class="table table-condensed table-striped table-bordered table-hover">
                     <thead>
@@ -256,7 +257,7 @@
                         <label for="new_password">@lang('common.new-adj') @lang('passwords.password')</label>
                         <label>
                             <input type="password" name="new_password" class="form-control"
-                                   placeholder="@lang('common.new-adj') @lang('common.password')">
+                                placeholder="@lang('common.new-adj') @lang('common.password')">
                         </label>
                     </div>
                     <br>

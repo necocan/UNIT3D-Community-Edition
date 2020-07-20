@@ -17,7 +17,8 @@
     <div class="container box">
         <div class="block">
             <h2>@lang('rss.public') @lang('rss.rss-feed')</h2>
-            <a href="{{ route('staff.rss.create') }}" class="btn btn-primary">@lang('common.create') @lang('rss.rss-feed')</a>
+            <a href="{{ route('staff.rss.create') }}" class="btn btn-primary">@lang('common.create')
+                @lang('rss.rss-feed')</a>
             <div class="table-responsive">
                 <table class="table table-condensed table-striped table-bordered table-hover">
                     <thead>
@@ -48,8 +49,8 @@
                                             class="{{ config('other.font-awesome') }} fa-check text-green"></i>@else<i
                                             class="{{ config('other.font-awesome') }} fa-times text-red"></i>@endif</td>
                                     <td>@if ($rss->object_torrent->resolutions)<i
-                                                class="{{ config('other.font-awesome') }} fa-check text-green"></i>@else<i
-                                                class="{{ config('other.font-awesome') }} fa-times text-red"></i>@endif</td>
+                                            class="{{ config('other.font-awesome') }} fa-check text-green"></i>@else<i
+                                            class="{{ config('other.font-awesome') }} fa-times text-red"></i>@endif</td>
                                     <td>@if ($rss->object_torrent->genres)<i
                                             class="{{ config('other.font-awesome') }} fa-check text-green"></i>@else<i
                                             class="{{ config('other.font-awesome') }} fa-times text-red"></i>@endif</td>

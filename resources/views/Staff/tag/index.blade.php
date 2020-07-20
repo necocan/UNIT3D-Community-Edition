@@ -27,7 +27,7 @@
             @lang('torrent.genre-tags')
             (@lang('torrent.genre'))
         </a>
-    
+
         <div class="table-responsive">
             <table class="table table-condensed table-striped table-bordered table-hover">
                 <thead>

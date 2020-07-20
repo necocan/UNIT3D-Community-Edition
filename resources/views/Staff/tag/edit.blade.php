@@ -9,7 +9,7 @@
     <li>
         <a href="{{ route('staff.tags.index') }}" itemprop="url" class="l-breadcrumb-item-link">
             <span itemprop="title" class="l-breadcrumb-item-link-title">
-            @lang('torrent.torrent') @lang('torrent.genre-tags') (@lang('torrent.genre'))</span>
+                @lang('torrent.torrent') @lang('torrent.genre-tags') (@lang('torrent.genre'))</span>
         </a>
     </li>
     <li class="active">
@@ -27,14 +27,14 @@
             @lang('common.edit') @lang('torrent.torrent') @lang('torrent.genre-tags') (@lang('torrent.genre'))</h2>
         <form role="form" method="POST" action="{{ route('staff.types.update', ['id' => $tag->id]) }}">
             @csrf
-    
+
             <div class="form-group">
                 <label for="name">@lang('common.name')</label>
                 <label>
                     <input type="text" class="form-control" name="name" value="{{ $tag->name }}">
                 </label>
             </div>
-    
+
             <button type="submit" class="btn btn-default">
                 {{ trans('common.submit') }}
             </button>

@@ -53,7 +53,7 @@
                 <input type="text" class="form-control" id="uploader" name="uploader"
                     value="{{ $rss->object_torrent->uploader }}">
             </div>
-    
+
             <div class="form-group">
                 <label for="imdb">ID</label>
                 <input type="text" class="form-control" id="imdb" name="imdb" value="{{ $rss->object_torrent->imdb }}">
@@ -64,7 +64,7 @@
                 <label for="mal"></label><input type="text" class="form-control" id="mal" name="mal"
                     value="{{ $rss->object_torrent->mal }}">
             </div>
-    
+
             <div class="form-group">
                 <label for="category">@lang('torrent.category')</label>
                 <div>
@@ -108,11 +108,14 @@
                     @foreach ($torrent_repository->resolutions() as $id => $resolution)
                         <span class="badge-user">
                             <label class="inline">
-                                @if(is_array($rss->object_torrent->resolutions) && in_array($id,$rss->object_torrent->resolutions))
-                                    <input type="checkbox" id="{{ $resolution }}" name="resolutions[]" value="{{ $id }}" class="resolution" CHECKED>
+                                @if(is_array($rss->object_torrent->resolutions) &&
+                                    in_array($id,$rss->object_torrent->resolutions))
+                                    <input type="checkbox" id="{{ $resolution }}" name="resolutions[]" value="{{ $id }}"
+                                        class="resolution" CHECKED>
                                     {{ $resolution }}
                                 @else
-                                    <input type="checkbox" id="{{ $resolution }}" name="resolutions[]" value="{{ $id }}" class="resolution">
+                                    <input type="checkbox" id="{{ $resolution }}" name="resolutions[]" value="{{ $id }}"
+                                        class="resolution">
                                     {{ $resolution }}
                                 @endif
                             </label>
@@ -239,7 +242,7 @@
                     </span>
                 </div>
             </div>
-    
+
             <div class="form-group">
                 <label for="type">@lang('torrent.health')</label>
                 <div>

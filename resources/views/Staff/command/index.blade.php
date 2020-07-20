@@ -29,7 +29,7 @@
                     <h1>Command Shortcuts</h1>
                 </div>
             </div>
-    
+
             <br>
             <div class="row text-center">
                 <div class="col-md-4">
@@ -45,7 +45,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="block">
                         <div class="panel-body">
@@ -59,7 +59,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="block">
                         <div class="panel-body">
@@ -73,10 +73,10 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <br>
                 <br>
-    
+
                 <div class="col-md-4">
                     <div class="block">
                         <div class="panel-body">
@@ -89,7 +89,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="block">
                         <div class="panel-body">
@@ -102,7 +102,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="block">
                         <div class="panel-body">
@@ -115,10 +115,10 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <br>
                 <br>
-    
+
                 <div class="col-md-4">
                     <div class="block">
                         <div class="panel-body">
@@ -131,7 +131,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="block">
                         <div class="panel-body">
@@ -144,7 +144,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="block">
                         <div class="panel-body">

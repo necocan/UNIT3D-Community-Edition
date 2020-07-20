@@ -26,18 +26,18 @@
 @section('content')
     <div class="container box">
         <div class="box-body">
-            <button id="create-full-backup-button" href="{{ route('staff.backups.full') }}"
-                class="btn btn-primary" data-style="zoom-in">
+            <button id="create-full-backup-button" href="{{ route('staff.backups.full') }}" class="btn btn-primary"
+                data-style="zoom-in">
                 <span class="ladda-label"><i class="{{ config('other.font-awesome') }} fa-plus"></i>
                     @lang('backup.create_a_new_backup')</span>
             </button>
-            <button id="create-files-backup-button" href="{{ route('staff.backups.files') }}"
-                class="btn btn-primary" data-style="zoom-in">
+            <button id="create-files-backup-button" href="{{ route('staff.backups.files') }}" class="btn btn-primary"
+                data-style="zoom-in">
                 <span class="ladda-label"><i class="{{ config('other.font-awesome') }} fa-plus"></i>
                     @lang('backup.create_a_new_files_backup')</span>
             </button>
-            <button id="create-db-backup-button" href="{{ route('staff.backups.database') }}"
-                class="btn btn-primary" data-style="zoom-in">
+            <button id="create-db-backup-button" href="{{ route('staff.backups.database') }}" class="btn btn-primary"
+                data-style="zoom-in">
                 <span class="ladda-label"><i class="{{ config('other.font-awesome') }} fa-plus"></i>
                     @lang('backup.create_a_new_db_backup')</span>
             </button>
@@ -63,11 +63,13 @@
                             <td class="text-right">{{ round((int) $b['file_size'] / 1048576, 2) . ' MB' }}</td>
                             <td class="text-right">
                                 @if ($b['download'])
-                                    <a class="btn btn-xs btn-success" href="{{ route('staff.backups.download') }}?disk={{ $b['disk'] }}&path={{ urlencode($b['file_path']) }}&file_name={{ urlencode($b['file_name']) }}">
-                                        <i class="{{ config('other.font-awesome') }} fa-cloud-download"></i >@lang('backup.download')
+                                    <a class="btn btn-xs btn-success"
+                                        href="{{ route('staff.backups.download') }}?disk={{ $b['disk'] }}&path={{ urlencode($b['file_path']) }}&file_name={{ urlencode($b['file_name']) }}">
+                                        <i class="{{ config('other.font-awesome') }} fa-cloud-download"></i>@lang('backup.download')
                                     </a>
                                 @endif
-                                <a class="btn btn-xs btn-danger" data-button-type="delete" href="{{ route('staff.backups.destroy') }}?file_name={{ urlencode($b['file_name']) }}&disk={{ $b['disk'] }}">
+                                <a class="btn btn-xs btn-danger" data-button-type="delete"
+                                    href="{{ route('staff.backups.destroy') }}?file_name={{ urlencode($b['file_name']) }}&disk={{ $b['disk'] }}">
                                     <i class="{{ config('other.font-awesome') }} fa-trash"></i> @lang('common.delete')
                                 </a>
                             </td>
@@ -112,9 +114,7 @@
                                 icon: 'warning',
                                 title: "@lang('backup.create_warning_message')"
                             })
-                        }
-                        else
-                        {
+                        } else {
                             Toast.fire({
                                 icon: 'success',
                                 title: "@lang('backup.create_confirmation_message')"
@@ -143,9 +143,7 @@
                                 icon: 'warning',
                                 title: "@lang('backup.create_warning_message')"
                             })
-                        }
-                        else
-                        {
+                        } else {
                             Toast.fire({
                                 icon: 'success',
                                 title: "@lang('backup.create_confirmation_message')"
@@ -174,9 +172,7 @@
                                 icon: 'warning',
                                 title: "@lang('backup.create_warning_message')"
                             })
-                        }
-                        else
-                        {
+                        } else {
                             Toast.fire({
                                 icon: 'success',
                                 title: "@lang('backup.create_confirmation_message')"
@@ -220,5 +216,6 @@
                 }
             });
         });
+
     </script>
 @endsection

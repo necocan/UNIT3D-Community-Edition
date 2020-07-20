@@ -44,7 +44,7 @@
                                     @csrf
                                     @method('DELETE')
                                     <a href="{{ route('staff.polls.edit', ['id' => $poll->id]) }}"
-                                       class="btn btn-warning">@lang('common.edit')</a>
+                                        class="btn btn-warning">@lang('common.edit')</a>
                                     <button type="submit" class="btn btn-danger">@lang('common.delete')</button>
                                 </form>
 

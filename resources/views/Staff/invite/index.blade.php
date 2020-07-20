@@ -29,7 +29,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <h2><span class="text-blue"><strong><i class="{{ config('other.font-awesome') }} fa-note"></i>
-                        {{ $invitecount }} </strong></span>@lang('user.invites-send') </h2>
+                                {{ $invitecount }} </strong></span>@lang('user.invites-send') </h2>
                     <div class="table-responsive">
                         <table class="table table-condensed table-striped table-bordered table-hover">
                             <thead>
