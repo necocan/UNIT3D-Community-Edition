@@ -257,116 +257,115 @@ config('api-keys.omdb')) @endphp
                             </a>
 
                             @if ($torrent->internal == 1)
-                                <span class='badge-extra text-bold'>
-                                    <i class='{{ config('other.font-awesome') }} fa-magic' data-toggle='tooltip' title=''
-                                        data-original-title='@lang('torrent.internal-release')' style="color: #baaf92;"></i>
+                                <span class="badge-extra text-bold">
+                                    <i class="{{ config('other.font-awesome') }} fa-magic" data-toggle="tooltip" title=""
+                                        data-original-title="@lang('torrent.internal-release')" style="color: #baaf92;"></i>
                                 </span>
                             @endif
 
                             @if ($torrent->stream == 1)
-                                <span class='badge-extra text-bold'>
-                                    <i class='{{ config('other.font-awesome') }} fa-play text-red' data-toggle='tooltip'
-                                        title='' data-original-title='@lang('torrent.stream-optimized')'></i>
+                                <span class="badge-extra text-bold">
+                                    <i class="{{ config('other.font-awesome') }} fa-play text-red" data-toggle="tooltip"
+                                        data-original-title="@lang('torrent.stream-optimized')"></i>
                                 </span>
                             @endif
 
                             @if ($torrent->featured == 0)
                                 @if ($torrent->doubleup == 1)
-                                    <span class='badge-extra text-bold'>
-                                        <i class='{{ config('other.font-awesome') }} fa-gem text-green' data-toggle='tooltip'
-                                            title='' data-original-title='@lang('torrent.double-upload')'></i>
+                                    <span class="badge-extra text-bold">
+                                        <i class="{{ config('other.font-awesome') }} fa-gem text-green" data-toggle="tooltip"
+                                            data-original-title="@lang('torrent.double-upload')"></i>
                                     </span>
                                 @endif
                                 @if ($torrent->free == 1)
-                                    <span class='badge-extra text-bold'>
-                                        <i class='{{ config('other.font-awesome') }} fa-star text-gold' data-toggle='tooltip'
-                                            title='' data-original-title='@lang('torrent.freeleech')'></i>
+                                    <span class="badge-extra text-bold">
+                                        <i class="{{ config('other.font-awesome') }} fa-star text-gold" data-toggle="tooltip"
+                                            data-original-title="@lang('torrent.freeleech')"></i>
                                     </span>
                                 @endif
                             @endif
 
                             @if ($personal_freeleech)
-                                <span class='badge-extra text-bold'>
-                                    <i class='{{ config('other.font-awesome') }} fa-id-badge text-orange' data-toggle='tooltip'
-                                        title='' data-original-title='@lang('torrent.personal-freeleech')'></i>
+                                <span class="badge-extra text-bold">
+                                    <i class="{{ config('other.font-awesome') }} fa-id-badge text-orange" data-toggle="tooltip"
+                                        data-original-title="@lang('torrent.personal-freeleech')"></i>
                                 </span>
                             @endif
 
                             @if ($user->freeleechTokens->where('torrent_id', $torrent->id)->first())
-                                <span class='badge-extra text-bold'>
-                                    <i class='{{ config('other.font-awesome') }} fa-star text-bold' data-toggle='tooltip'
-                                        title='' data-original-title='@lang('torrent.freeleech-token')'></i>
+                                <span class="badge-extra text-bold">
+                                    <i class="{{ config('other.font-awesome') }} fa-star text-bold" data-toggle="tooltip"
+                                        data-original-title="@lang('torrent.freeleech-token')"></i>
                                 </span>
                             @endif
 
                             @if ($torrent->featured == 1)
-                                <span class='badge-extra text-bold' style='background-image:url(/img/sparkels.gif);'>
-                                    <i class='{{ config('other.font-awesome') }} fa-certificate text-pink' data-toggle='tooltip'
-                                        title='' data-original-title='@lang('torrent.featured')'></i>
+                                <span class="badge-extra text-bold" style="background-image:url(/img/sparkels.gif);">
+                                    <i class="{{ config('other.font-awesome') }} fa-certificate text-pink" data-toggle="tooltip"
+                                        data-original-title="@lang('torrent.featured')"></i>
                                 </span>
                             @endif
 
                             @if ($user->group->is_freeleech == 1)
-                                <span class='badge-extra text-bold'>
-                                    <i class='{{ config('other.font-awesome') }} fa-trophy text-purple' data-toggle='tooltip'
-                                        title='' data-original-title='@lang('torrent.special-freeleech')'></i>
+                                <span class="badge-extra text-bold">
+                                    <i class="{{ config('other.font-awesome') }} fa-trophy text-purple" data-toggle="tooltip"
+                                        data-original-title="@lang('torrent.special-freeleech')"></i>
                                 </span>
                             @endif
 
                             @if (config('other.freeleech') == 1)
-                                <span class='badge-extra text-bold'>
-                                    <i class='{{ config('other.font-awesome') }} fa-globe text-blue' data-toggle='tooltip'
-                                        title='' data-original-title='@lang('torrent.global-freeleech')'></i>
+                                <span class="badge-extra text-bold">
+                                    <i class="{{ config('other.font-awesome') }} fa-globe text-blue" data-toggle="tooltip"
+                                        data-original-title="@lang('torrent.global-freeleech')"></i>
                                 </span>
                             @endif
 
                             @if (config('other.doubleup') == 1)
-                                <span class='badge-extra text-bold'>
-                                    <i class='{{ config('other.font-awesome') }} fa-globe text-green' data-toggle='tooltip'
-                                        title='' data-original-title='@lang('torrent.global-double-upload')'></i>
+                                <span class="badge-extra text-bold">
+                                    <i class="{{ config('other.font-awesome') }} fa-globe text-green" data-toggle="tooltip"
+                                        data-original-title="@lang('torrent.global-double-upload')"></i>
                                 </span>
                             @endif
 
-                                        @if ($user->group->is_double_upload == 1)
-                                            <span class='badge-extra text-bold'>
-                                                <i class='{{ config('other.font-awesome') }} fa-trophy text-purple'
-                                                   data-toggle='tooltip' title='' data-original-title='@lang('
-                                                    torrent.special-double_upload')'></i>
+                            @if ($user->group->is_double_upload == 1)
+                                <span class="badge-extra text-bold">
+                                      <i class="{{ config('other.font-awesome') }} fa-trophy text-purple" data-toggle="tooltip"
+                                    data-original-title="@lang('torrent.special-double_upload')"></i>
                                             </span>
                                         @endif
 
                             @if ($torrent->leechers >= 5)
-                                <span class='badge-extra text-bold'>
-                                    <i class='{{ config('other.font-awesome') }} fa-fire text-orange' data-toggle='tooltip'
-                                        title='' data-original-title='@lang('common.hot')'></i>
+                                <span class="badge-extra text-bold">
+                                    <i class="{{ config('other.font-awesome') }} fa-fire text-orange" data-toggle="tooltip"
+                                        data-original-title="@lang('common.hot')"></i>
                                 </span>
                             @endif
 
                             @if ($torrent->sticky == 1)
-                                <span class='badge-extra text-bold'>
-                                    <i class='{{ config('other.font-awesome') }} fa-thumbtack text-black' data-toggle='tooltip'
-                                        title='' data-original-title='@lang('torrent.sticky')'></i>
+                                <span class="badge-extra text-bold">
+                                    <i class="{{ config('other.font-awesome') }} fa-thumbtack text-black" data-toggle="tooltip"
+                                        data-original-title="@lang('torrent.sticky')"></i>
                                 </span>
                             @endif
 
                             @if ($user->updated_at->getTimestamp() < $torrent->created_at->getTimestamp())
-                                    <span class='badge-extra text-bold'>
-                                        <i class='{{ config('other.font-awesome') }} fa-magic text-black' data-toggle='tooltip'
-                                            title='' data-original-title='@lang('common.new')'></i>
+                                    <span class="badge-extra text-bold">
+                                        <i class="{{ config('other.font-awesome') }} fa-magic text-black" data-toggle="tooltip"
+                                            data-original-title="@lang('common.new')"></i>
                                     </span>
                                 @endif
 
                                 @if ($torrent->highspeed == 1)
-                                    <span class='badge-extra text-bold'>
-                                        <i class='{{ config('other.font-awesome') }} fa-tachometer text-red' data-toggle='tooltip'
-                                        title='' data-original-title='@lang('common.high-speeds')'></i>
+                                    <span class="badge-extra text-bold">
+                                        <i class="{{ config('other.font-awesome') }} fa-tachometer text-red" data-toggle="tooltip"
+                                        data-original-title="@lang('common.high-speeds')"></i>
                                     </span>
                                 @endif
 
                                 @if ($torrent->sd == 1)
-                                    <span class='badge-extra text-bold'>
-                                        <i class='{{ config('other.font-awesome') }} fa-ticket text-orange' data-toggle='tooltip'
-                                        title='' data-original-title='@lang('torrent.sd-content')'></i>
+                                    <span class="badge-extra text-bold">
+                                        <i class="{{ config('other.font-awesome') }} fa-ticket text-orange" data-toggle="tooltip"
+                                        data-original-title="@lang('torrent.sd-content')"></i>
                                     </span>
                                 @endif
 
@@ -376,8 +375,8 @@ config('api-keys.omdb')) @endphp
                                 @if (isset($meta) && $meta->genres)
                                     @foreach ($meta->genres as $genre)
                                         <span class="badge-extra text-bold">
-                                            <i class='{{ config('other.font-awesome') }} fa-tag' data-toggle='tooltip' title=''
-                                                data-original-title='@lang('torrent.genre')'></i> {{ $genre->name }}
+                                            <i class="{{ config('other.font-awesome') }} fa-tag" data-toggle="tooltip"
+                                                data-original-title="@lang('torrent.genre')"></i> {{ $genre->name }}
                                         </span>
                                     @endforeach
                                 @endif
@@ -386,8 +385,8 @@ config('api-keys.omdb')) @endphp
                             @if ($torrent->category->movie_meta || $torrent->category->tv_meta)
                                 @foreach($torrent->tags as $tag)
                                     <span class="badge-extra text-bold">
-                                        <i class='{{ config('other.font-awesome') }} fa-tag' data-toggle='tooltip' title=''
-                                            data-original-title='@lang('torrent.genre')'></i> {{ $tag->name }}
+                                        <i class="{{ config('other.font-awesome') }} fa-tag" data-toggle="tooltip"
+                                            data-original-title="@lang('torrent.genre')"></i> {{ $tag->name }}
                                     </span>
                                 @endforeach
                             @endif
@@ -430,25 +429,25 @@ config('api-keys.omdb')) @endphp
                         <time>{{ $torrent->created_at->diffForHumans() }}</time>
                     </td>
                     <td>
-                        <span class='badge-extra text-blue text-bold'>{{ $torrent->getSize() }}</span>
+                        <span class="badge-extra text-blue text-bold">{{ $torrent->getSize() }}</span>
                     </td>
                     <td>
                         <a href="{{ route('peers', ['id' => $torrent->id]) }}">
-                            <span class='badge-extra text-green text-bold'>
+                            <span class="badge-extra text-green text-bold">
                                 {{ $torrent->seeders }}
                             </span>
                         </a>
                     </td>
                     <td>
                         <a href="{{ route('peers', ['id' => $torrent->id]) }}">
-                            <span class='badge-extra text-red text-bold'>
+                            <span class="badge-extra text-red text-bold">
                                 {{ $torrent->leechers }}
                             </span>
                         </a>
                     </td>
                     <td>
                         <a href="{{ route('history', ['id' => $torrent->id]) }}">
-                            <span class='badge-extra text-orange text-bold'>
+                            <span class="badge-extra text-orange text-bold">
                                 {{ $torrent->times_completed }} @lang('common.times')
                             </span>
                         </a>

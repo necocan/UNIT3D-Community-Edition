@@ -52,8 +52,8 @@
                                itemprop="url" class="l-breadcrumb-item-link"><span itemprop="title"
                                                                                    class="l-breadcrumb-item-link-title">{{ $p->user->username }}
                                     ({{ $p->user->group->name }})</span></a></td>
-                        <td><a href="{{ route('staff.moderation.approve', ['id' => $p->id]) }}" role='button'
-                               class='btn btn-labeled btn-success'>
+                        <td><a href="{{ route('staff.moderation.approve', ['id' => $p->id]) }}" role="button"
+                               class="btn btn-labeled btn-success">
                                 <span class="btn-label">
                                     <i class="{{ config('other.font-awesome') }} fa-thumbs-up"></i>
                                 </span>
@@ -215,15 +215,15 @@
                                itemprop="url" class="l-breadcrumb-item-link"><span itemprop="title"
                                                                                    class="l-breadcrumb-item-link-title">{{ $post->moderated->username }}
                                     ({{ $post->moderated->group->name }})</span></a></td>
-                        <td><a href="{{ route('staff.moderation.approve', ['id' => $post->id]) }}" role='button'
-                               class='btn btn-labeled btn-success'>
+                        <td><a href="{{ route('staff.moderation.approve', ['id' => $post->id]) }}" role="button"
+                               class="btn btn-labeled btn-success">
                                 <span class="btn-label">
                                     <i class="{{ config('other.font-awesome') }} fa-thumbs-up"></i>
                                 </span>
                                 @lang('common.moderation-approve')
                             </a></td>
-                        <td><a href="{{ route('edit', ['id' => $post->id]) }}" role='button'
-                               class='btn btn-labeled btn-info'><span class="btn-label"><i
+                        <td><a href="{{ route('edit', ['id' => $post->id]) }}" role="button"
+                               class="btn btn-labeled btn-info"><span class="btn-label"><i
                                             class="{{ config('other.font-awesome') }} fa-pencil"></i></span>@lang('common.edit')</a></td>
                         <td>
                             <button data-target="#postdelete-{{ $post->id }}" data-toggle="modal"
@@ -331,8 +331,8 @@
                                itemprop="url" class="l-breadcrumb-item-link"><span itemprop="title"
                                                                                    class="l-breadcrumb-item-link-title">{{ $reject->moderated->username }}
                                     ({{ $reject->moderated->group->name }})</span></a></td>
-                        <td><a href="{{ route('staff.moderation.approve', ['id' => $reject->id]) }}" role='button'
-                               class='btn btn-labeled btn-success'>
+                        <td><a href="{{ route('staff.moderation.approve', ['id' => $reject->id]) }}" role="button"
+                               class="btn btn-labeled btn-success">
                                 <span class="btn-label">
                                     <i class="{{ config('other.font-awesome') }} fa-thumbs-up"></i>
                                 </span>
@@ -388,8 +388,8 @@
                                 </form>
                             </div>
                         </td>
-                        <td><a href="{{ route('edit', ['id' => $reject->id]) }}" role='button'
-                               class='btn btn-labeled btn-info'><span class="btn-label"><i
+                        <td><a href="{{ route('edit', ['id' => $reject->id]) }}" role="button"
+                               class="btn btn-labeled btn-info"><span class="btn-label"><i
                                             class="{{ config('other.font-awesome') }} fa-pencil"></i></span>@lang('common.edit')</a></td>
                         <td>
                             <button data-target="#rejectdelete-{{ $reject->id }}" data-toggle="modal"

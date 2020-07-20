@@ -3,29 +3,29 @@
         @if(auth()->user()->id == $user->id)
             @if((!auth()->user()->hidden || auth()->user()->hidden == 0))
                 <a href="{{ route('user_hidden', ['username' => $user->username]) }}" class="btn btn-sm btn-danger">
-                    <i class='{{ config('other.font-awesome') }} fa-eye-slash'></i> @lang('user.become-hidden')
+                    <i class="{{ config('other.font-awesome') }} fa-eye-slash"></i> @lang('user.become-hidden')
                 </a>
             @else
                 <a href="{{ route('user_visible', ['username' => $user->username]) }}" class="btn btn-sm btn-success">
-                    <i class='{{ config('other.font-awesome') }} fa-eye'></i> @lang('user.become-visible')
+                    <i class="{{ config('other.font-awesome') }} fa-eye"></i> @lang('user.become-visible')
                 </a>
             @endif
             @if((auth()->user()->private_profile == 0 || auth()->user()->private_profile == 0))
                 <a href="{{ route('user_private', ['username' => $user->username]) }}" class="btn btn-sm btn-danger">
-                    <i class='{{ config('other.font-awesome') }} fa-lock'></i> @lang('user.go-private')
+                    <i class="{{ config('other.font-awesome') }} fa-lock"></i> @lang('user.go-private')
                 </a>
             @else
                 <a href="{{ route('user_public', ['username' => $user->username]) }}" class="btn btn-sm btn-success">
-                    <i class='{{ config('other.font-awesome') }} fa-lock-open'></i> @lang('user.go-public')
+                    <i class="{{ config('other.font-awesome') }} fa-lock-open"></i> @lang('user.go-public')
                 </a>
             @endif
             @if((auth()->user()->block_notifications == 0 || auth()->user()->block_notifications == 0))
                 <a href="{{ route('notification_disable', ['username' => $user->username]) }}" class="btn btn-sm btn-danger">
-                    <i class='{{ config('other.font-awesome') }} fa-bell-slash'></i> @lang('user.disable-notifications')
+                    <i class="{{ config('other.font-awesome') }} fa-bell-slash"></i> @lang('user.disable-notifications')
                 </a>
             @else
                 <a href="{{ route('notification_enable', ['username' => $user->username]) }}" class="btn btn-sm btn-success">
-                    <i class='{{ config('other.font-awesome') }} fa-bell'></i> @lang('user.enable-notifications')
+                    <i class="{{ config('other.font-awesome') }} fa-bell"></i> @lang('user.enable-notifications')
                 </a>
             @endif
         @endif

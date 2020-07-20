@@ -56,24 +56,24 @@
                         <td>{{ $upload->created_at ? $upload->created_at->diffForHumans() : 'N/A' }}</td>
                         <td>
                             @if ($upload->isPending())
-                                <span class='label label-warning' data-toggle="tooltip">@lang('torrent.pending')</span>
+                                <span class="label label-warning" data-toggle="tooltip">@lang('torrent.pending')</span>
                             @elseif ($upload->isApproved())
-                                <span class='label label-success' data-toggle="tooltip"
+                                <span class="label label-success" data-toggle="tooltip"
                                     data-original-title="Moderated By {{ $upload->moderated->username }} {{ $upload->moderated_at->diffForHumans() }}">@lang('torrent.approved')</span>
                             @elseif ($upload->isRejected())
-                                <span class='label label-danger' data-toggle="tooltip"
+                                <span class="label label-danger" data-toggle="tooltip"
                                     data-original-title="Moderated By {{ $upload->moderated->username }} {{ $upload->moderated_at->diffForHumans() }}">@lang('torrent.rejected')</span>
                             @endif
                         </td>
                         <td>
                             @if ($upload->seeders + $upload->leechers == 0)
-                                <span class='label label-danger'>@lang('graveyard.dead')</span>
+                                <span class="label label-danger">@lang('graveyard.dead')</span>
                             @elseif ($upload->seeders >= 1)
-                                <span class='label label-success'>@lang('torrent.alive')</span>
+                                <span class="label label-success">@lang('torrent.alive')</span>
                             @elseif ($upload->leechers >= 1 + $upload->seeders = 0)
-                                <span class='label label-info'>@lang('torrent.requires-reseed')</span>
+                                <span class="label label-info">@lang('torrent.requires-reseed')</span>
                             @else
-                                <span class='label label-warning'>{{ strtoupper(trans('common.error')) }}</span>
+                                <span class="label label-warning">{{ strtoupper(trans('common.error')) }}</span>
                             @endif
                         </td>
                     </tr>

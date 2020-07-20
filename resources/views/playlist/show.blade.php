@@ -84,19 +84,19 @@
 								@if ($t->torrent->tmdb != 0)
 									<a href="{{ route('torrents.similar', ['category_id' => $t->torrent->category_id, 'tmdb' => $t->torrent->tmdb]) }}" role="button"
 									   data-toggle="tooltip" data-placement="top" data-original-title="@lang('torrent.similar')" class="btn btn-xs btn-primary" style="float: left; margin-right: 10px;">
-										<i class='{{ config("other.font-awesome") }} fa-copy'></i>
+										<i class="{{ config("other.font-awesome") }} fa-copy"></i>
 									</a>
 								@endif
 								&nbsp;
 								@if (config('torrent.download_check_page') == 1)
 									<a href="{{ route('download_check', ['id' => $t->torrent->id]) }}" role="button"
 									   data-toggle="tooltip" data-placement="top" data-original-title="@lang('common.download')" class="btn btn-xs btn-success" style="float: left; margin-right: 10px;">
-										<i class='{{ config("other.font-awesome") }} fa-download'></i>
+										<i class="{{ config("other.font-awesome") }} fa-download"></i>
 									</a>
 								@else
 									<a href="{{ route('download', ['id' => $t->torrent->id]) }}" role="button"
 									   data-toggle="tooltip" data-placement="top" data-original-title="@lang('common.download')" class="btn btn-xs btn-success" style="float: left; margin-right: 10px;">
-										<i class='{{ config("other.font-awesome") }} fa-download'></i>
+										<i class="{{ config("other.font-awesome") }} fa-download"></i>
 									</a>
 								@endif
 								&nbsp;

@@ -110,8 +110,8 @@
                     @else
                         <a href="{{ route('download', ['id' => $torrent->id]) }}" role="button"
                             class="btn btn-labeled btn-primary">
-                            <span class='btn-label'><i
-                                    class='{{ config('other.font-awesome') }} fa-download'></i></span>@lang('common.download')</a>
+                            <span class="btn-label"><i
+                                    class="{{ config('other.font-awesome') }} fa-download"></i></span>@lang('common.download')</a>
                     @endif
             </div>
         </div>

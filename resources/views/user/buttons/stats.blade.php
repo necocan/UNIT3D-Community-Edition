@@ -27,8 +27,8 @@
             @if(!$route || $route != 'profile')
                 <a href="{{ route('download_history_torrents', ['username' => $user->username]) }}" role="button"
                     class="btn btn-sm btn-labeled btn-success">
-                    <span class='btn-label'>
-                        <i class='{{ config('other.font-awesome') }} fa-download'></i> @lang('torrent.download-all')
+                    <span class="btn-label">
+                        <i class="{{ config('other.font-awesome') }} fa-download"></i> @lang('torrent.download-all')
                     </span>
                 </a>
             @endif

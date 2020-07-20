@@ -31,8 +31,8 @@
             @lang('forum.author') <a
                 href="{{ route('users.show', ['username' => $topic->first_post_user_username]) }}">{{ $topic->first_post_user_username }}</a>,
             {{ date('M d Y H:m', strtotime($topic->created_at)) }}
-            <span class='label label-primary'>{{ $topic->num_post - 1 }} {{ strtolower(trans('forum.replies')) }}</span>
-            <span class='label label-info'>{{ $topic->views - 1 }} {{ strtolower(trans('forum.views')) }}</span>
+            <span class="label label-primary">{{ $topic->num_post - 1 }} {{ strtolower(trans('forum.replies')) }}</span>
+            <span class="label label-info">{{ $topic->views - 1 }} {{ strtolower(trans('forum.views')) }}</span>
             @if(auth()->user()->isSubscribed('topic', $topic->id))
                 <a href="{{ route('unsubscribe_topic', ['topic' => $topic->id, 'route' => 'topic']) }}"
                     class="label label-sm label-danger">
@@ -246,64 +246,64 @@
                             <h3>@lang('forum.label-system')</h3>
                             @if ($topic->approved == "0")
                                 <a href="{{ route('topics.approve', ['id' => $topic->id]) }}"
-                                    class='label label-sm label-success'>@lang('common.add')
+                                    class="label label-sm label-success">@lang('common.add')
                                     {{ strtoupper(trans('forum.approved')) }}</a>
                             @else
                                 <a href="{{ route('topics.approve', ['id' => $topic->id]) }}"
-                                    class='label label-sm label-success'>@lang('common.remove')
+                                    class="label label-sm label-success">@lang('common.remove')
                                     {{ strtoupper(trans('forum.approved')) }}</a>
                             @endif
                             @if ($topic->denied == "0")
                                 <a href="{{ route('topics.deny', ['id' => $topic->id]) }}"
-                                    class='label label-sm label-danger'>@lang('common.add')
+                                    class="label label-sm label-danger">@lang('common.add')
                                     {{ strtoupper(trans('forum.denied')) }}</a>
                             @else
                                 <a href="{{ route('topics.deny', ['id' => $topic->id]) }}"
-                                    class='label label-sm label-danger'>@lang('common.remove')
+                                    class="label label-sm label-danger">@lang('common.remove')
                                     {{ strtoupper(trans('forum.denied')) }}</a>
                             @endif
                             @if ($topic->solved == "0")
                                 <a href="{{ route('topics.solve', ['id' => $topic->id]) }}"
-                                    class='label label-sm label-info'>@lang('common.add')
+                                    class="label label-sm label-info">@lang('common.add')
                                     {{ strtoupper(trans('forum.solved')) }}</a>
                             @else
                                 <a href="{{ route('topics.solve', ['id' => $topic->id]) }}"
-                                    class='label label-sm label-info'>@lang('common.remove')
+                                    class="label label-sm label-info">@lang('common.remove')
                                     {{ strtoupper(trans('forum.solved')) }}</a>
                             @endif
                             @if ($topic->invalid == "0")
                                 <a href="{{ route('topics.invalid', ['id' => $topic->id]) }}"
-                                    class='label label-sm label-warning'>@lang('common.add')
+                                    class="label label-sm label-warning">@lang('common.add')
                                     {{ strtoupper(trans('forum.invalid')) }}</a>
                             @else
                                 <a href="{{ route('topics.invalid', ['id' => $topic->id]) }}"
-                                    class='label label-sm label-warning'>@lang('common.remove')
+                                    class="label label-sm label-warning">@lang('common.remove')
                                     {{ strtoupper(trans('forum.invalid')) }}</a>
                             @endif
                             @if ($topic->bug == "0")
                                 <a href="{{ route('topics.bug', ['id' => $topic->id]) }}"
-                                    class='label label-sm label-danger'>@lang('common.add') {{ strtoupper(trans('forum.bug')) }}</a>
+                                    class="label label-sm label-danger">@lang('common.add') {{ strtoupper(trans('forum.bug')) }}</a>
                             @else
                                 <a href="{{ route('topics.bug', ['id' => $topic->id]) }}"
-                                    class='label label-sm label-danger'>@lang('common.remove')
+                                    class="label label-sm label-danger">@lang('common.remove')
                                     {{ strtoupper(trans('forum.bug')) }}</a>
                             @endif
                             @if ($topic->suggestion == "0")
                                 <a href="{{ route('topics.suggest', ['id' => $topic->id]) }}"
-                                    class='label label-sm label-primary'>@lang('common.add')
+                                    class="label label-sm label-primary">@lang('common.add')
                                     {{ strtoupper(trans('forum.suggestion')) }}</a>
                             @else
                                 <a href="{{ route('topics.suggest', ['id' => $topic->id]) }}"
-                                    class='label label-sm label-primary'>@lang('common.remove')
+                                    class="label label-sm label-primary">@lang('common.remove')
                                     {{ strtoupper(trans('forum.suggestion')) }}</a>
                             @endif
                             @if ($topic->implemented == "0")
                                 <a href="{{ route('topics.implement', ['id' => $topic->id]) }}"
-                                    class='label label-sm label-success'>@lang('common.add')
+                                    class="label label-sm label-success">@lang('common.add')
                                     {{ strtoupper(trans('forum.implemented')) }}</a>
                             @else
                                 <a href="{{ route('topics.implement', ['id' => $topic->id]) }}"
-                                    class='label label-sm label-success'>@lang('common.remove')
+                                    class="label label-sm label-success">@lang('common.remove')
                                     {{ strtoupper(trans('forum.implemented')) }}</a>
                             @endif
                         @endif

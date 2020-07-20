@@ -128,7 +128,7 @@
                                 : <span class="text-green text-bold">{{ $user->torrents->count() }}</span></span>
                                     <span class="badge-user badge-float p-10"><i
                                                 class="{{ config('other.font-awesome') }} fa-download"></i> @lang('user.total-downloads')
-                                        : <span class="text-red text-bold">{{ $history->where('actual_downloaded', '>', 0)->count() }}</span></span>
+                                        : <span class="text-red text-bold">{{ $history->where('actual_downloaded', ">', 0)->count() }}</span></span>
                                     <span class="badge-user badge-float p-10"><i
                                                 class="{{ config('other.font-awesome') }} fa-cloud-upload"></i> @lang('user.total-seeding')
                                         : <span class="text-green text-bold">{{ $user->getSeeding() }}</span></span>
@@ -319,17 +319,17 @@
                                 <ul class="list-inline mb-0">
                                 <li>
           <span class="badge-extra"><strong>@lang('user.article-comments'):</strong>
-            <span class="text-green text-bold">{{ $user->comments()->where('article_id', '>', 0)->count() }}</span>
+            <span class="text-green text-bold">{{ $user->comments()->where('article_id', ">', 0)->count() }}</span>
           </span>
                                 </li>
                                 <li>
           <span class="badge-extra"><strong>@lang('user.torrent-comments'):</strong>
-            <span class="text-green text-bold">{{ $user->comments()->where('torrent_id', '>', 0)->count() }}</span>
+            <span class="text-green text-bold">{{ $user->comments()->where('torrent_id', ">', 0)->count() }}</span>
           </span>
                                 </li>
                                 <li>
           <span class="badge-extra"><strong>@lang('user.request-comments'):</strong>
-            <span class="text-green text-bold">{{ $user->comments()->where('requests_id', '>', 0)->count() }}</span>
+            <span class="text-green text-bold">{{ $user->comments()->where('requests_id', ">', 0)->count() }}</span>
           </span>
                                 </li>
                                 </ul>
@@ -437,7 +437,7 @@
                                       title="" data-original-title="@lang('user.certified-seeder-desc')"><i
                                             class="{{ config('other.font-awesome') }} fa-upload"></i> @lang('user.certified-seeder')!</span>
                             @endif
-                            @if ($history->where('actual_downloaded', '>', 0)->count() >= 100)
+                            @if ($history->where('actual_downloaded', ">', 0)->count() >= 100)
                                 <span class="badge-user" style="background-color:#ff0039; color:rgb(255,255,255);" data-toggle="tooltip"
                                       title="" data-original-title="@lang('user.certified-downloader-desc')"><i
                                             class="{{ config('other.font-awesome') }} fa-download"></i> @lang('user.certified-downloader')!</span>
@@ -673,9 +673,9 @@
                                     </td>
                                     <td>
                                         @if ($hr->active == 1)
-                                            <span class='label label-success'>@lang('common.yes')</span>
+                                            <span class="label label-success">@lang('common.yes')</span>
                                         @else
-                                            <span class='label label-danger'>@lang('user.expired')</span>
+                                            <span class="label label-danger">@lang('user.expired')</span>
                                         @endif
                                     </td>
                                 </tr>

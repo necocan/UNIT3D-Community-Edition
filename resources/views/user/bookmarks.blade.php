@@ -147,112 +147,112 @@
                                         </span>
         
                                         @if ($bookmark->internal == 1)
-                                            <span class='badge-extra text-bold'>
-                                                <i class='{{ config('other.font-awesome') }} fa-magic' data-toggle='tooltip'
-                                                    data-original-title='Internal Release' style="color: #baaf92;"></i> Internal
+                                            <span class="badge-extra text-bold">
+                                                <i class="{{ config('other.font-awesome') }} fa-magic" data-toggle="tooltip"
+                                                    data-original-title="Internal Release" style="color: #baaf92;"></i> Internal
                                             </span>
                                         @endif
         
                                         @if ($bookmark->stream == 1)
-                                            <span class='badge-extra text-bold'>
-                                                <i class='{{ config('other.font-awesome') }} fa-play text-red' data-toggle='tooltip'
-                                                    data-original-title='Stream Optimized'></i> Stream Optimized
+                                            <span class="badge-extra text-bold">
+                                                <i class="{{ config('other.font-awesome') }} fa-play text-red" data-toggle="tooltip"
+                                                    data-original-title="Stream Optimized"></i> Stream Optimized
                                             </span>
                                         @endif
         
                                         @if ($bookmark->featured == 0)
                                             @if ($bookmark->doubleup == 1)
-                                                <span class='badge-extra text-bold'>
-                                                    <i class='{{ config('other.font-awesome') }} fa-gem text-green'
-                                                        data-toggle='tooltip' data-original-title='Double upload'></i> Double Upload
+                                                <span class="badge-extra text-bold">
+                                                    <i class="{{ config('other.font-awesome') }} fa-gem text-green"
+                                                        data-toggle="tooltip" data-original-title="Double upload"></i> Double Upload
                                                 </span>
                                             @endif
                                             @if ($bookmark->free == 1)
-                                                <span class='badge-extra text-bold'>
-                                                    <i class='{{ config('other.font-awesome') }} fa-star text-gold'
-                                                        data-toggle='tooltip' data-original-title='100% Free'></i> 100% Free
+                                                <span class="badge-extra text-bold">
+                                                    <i class="{{ config('other.font-awesome') }} fa-star text-gold"
+                                                        data-toggle="tooltip" data-original-title="100% Free"></i> 100% Free
                                                 </span>
                                             @endif
                                         @endif
         
                                         @if ($personal_freeleech)
-                                            <span class='badge-extra text-bold'>
-                                                <i class='{{ config('other.font-awesome') }} fa-id-badge text-orange'
-                                                    data-toggle='tooltip' data-original-title='Personal FL'></i> Personal FL
+                                            <span class="badge-extra text-bold">
+                                                <i class="{{ config('other.font-awesome') }} fa-id-badge text-orange"
+                                                    data-toggle="tooltip" data-original-title="Personal FL"></i> Personal FL
                                             </span>
                                         @endif
         
                                         @php $freeleech_token = \App\Models\FreeleechToken::where('user_id', '=',
                                         $user->id)->where('torrent_id', '=', $bookmark->id)->first(); @endphp
                                         @if ($freeleech_token)
-                                            <span class='badge-extra text-bold'>
-                                                <i class='{{ config('other.font-awesome') }} fa-star text-bold'
-                                                    data-toggle='tooltip' data-original-title='Freeleech Token'></i> Freeleech Token
+                                            <span class="badge-extra text-bold">
+                                                <i class="{{ config('other.font-awesome') }} fa-star text-bold"
+                                                    data-toggle="tooltip" data-original-title="Freeleech Token"></i> Freeleech Token
                                             </span>
                                         @endif
         
                                         @if ($bookmark->featured == 1)
-                                            <span class='badge-extra text-bold' style='background-image:url(/img/sparkels.gif);'>
-                                                <i class='{{ config('other.font-awesome') }} fa-certificate text-pink'
-                                                    data-toggle='tooltip' data-original-title='Featured Torrent'></i> Featured
+                                            <span class="badge-extra text-bold" style="background-image:url(/img/sparkels.gif);">
+                                                <i class="{{ config('other.font-awesome') }} fa-certificate text-pink"
+                                                    data-toggle="tooltip" data-original-title="Featured Torrent"></i> Featured
                                             </span>
                                         @endif
         
                                         @if ($user->group->is_freeleech == 1)
-                                            <span class='badge-extra text-bold'>
-                                                <i class='{{ config('other.font-awesome') }} fa-trophy text-purple'
-                                                    data-toggle='tooltip' data-original-title='Special FL'></i> Special FL
+                                            <span class="badge-extra text-bold">
+                                                <i class="{{ config('other.font-awesome') }} fa-trophy text-purple"
+                                                    data-toggle="tooltip" data-original-title="Special FL"></i> Special FL
                                             </span>
                                         @endif
         
                                         @if (config('other.freeleech') == 1)
-                                            <span class='badge-extra text-bold'>
-                                                <i class='{{ config('other.font-awesome') }} fa-globe text-blue'
-                                                    data-toggle='tooltip' data-original-title='Global FreeLeech'></i> Global
+                                            <span class="badge-extra text-bold">
+                                                <i class="{{ config('other.font-awesome') }} fa-globe text-blue"
+                                                    data-toggle="tooltip" data-original-title="Global FreeLeech"></i> Global
                                                 FreeLeech
                                             </span>
                                         @endif
         
                                         @if (config('other.doubleup') == 1)
-                                            <span class='badge-extra text-bold'>
-                                                <i class='{{ config('other.font-awesome') }} fa-globe text-green'
-                                                    data-toggle='tooltip' data-original-title='Double Upload'></i> Global Double
+                                            <span class="badge-extra text-bold">
+                                                <i class="{{ config('other.font-awesome') }} fa-globe text-green"
+                                                    data-toggle="tooltip" data-original-title="Double Upload"></i> Global Double
                                                 Upload
                                             </span>
                                         @endif
         
                                         @if ($bookmark->leechers >= 5)
-                                            <span class='badge-extra text-bold'>
-                                                <i class='{{ config('other.font-awesome') }} fa-fire text-orange'
-                                                    data-toggle='tooltip' data-original-title='Hot!'></i> Hot
+                                            <span class="badge-extra text-bold">
+                                                <i class="{{ config('other.font-awesome') }} fa-fire text-orange"
+                                                    data-toggle="tooltip" data-original-title="Hot!"></i> Hot
                                             </span>
                                         @endif
         
                                         @if ($bookmark->sticky == 1)
-                                            <span class='badge-extra text-bold'>
-                                                <i class='{{ config('other.font-awesome') }} fa-thumbtack text-black'
-                                                    data-toggle='tooltip' data-original-title='Sticky!'></i> Sticky
+                                            <span class="badge-extra text-bold">
+                                                <i class="{{ config('other.font-awesome') }} fa-thumbtack text-black"
+                                                    data-toggle="tooltip" data-original-title="Sticky!"></i> Sticky
                                             </span>
                                         @endif
         
                                         @if ($user->updated_at->getTimestamp() < $bookmark->created_at->getTimestamp())
-                                                <span class='badge-extra text-bold'>
-                                                    <i class='{{ config('other.font-awesome') }} fa-magic text-black'
-                                                        data-toggle='tooltip' data-original-title='NEW!'></i> NEW
+                                                <span class="badge-extra text-bold">
+                                                    <i class="{{ config('other.font-awesome') }} fa-magic text-black"
+                                                        data-toggle="tooltip" data-original-title="NEW!"></i> NEW
                                                 </span>
                                             @endif
         
                                             @if ($bookmark->highspeed == 1)
-                                                <span class='badge-extra text-bold'>
-                                                    <i class='{{ config('other.font-awesome') }} fa-tachometer text-red'
-                                                        data-toggle='tooltip' data-original-title='High Speeds!'></i> High Speeds
+                                                <span class="badge-extra text-bold">
+                                                    <i class="{{ config('other.font-awesome') }} fa-tachometer text-red"
+                                                        data-toggle="tooltip" data-original-title="High Speeds!"></i> High Speeds
                                                 </span>
                                             @endif
         
                                             @if ($bookmark->sd == 1)
-                                                <span class='badge-extra text-bold'>
-                                                    <i class='{{ config('other.font-awesome') }} fa-ticket text-orange'
-                                                        data-toggle='tooltip' data-original-title='SD Content!'></i> SD Content
+                                                <span class="badge-extra text-bold">
+                                                    <i class="{{ config('other.font-awesome') }} fa-ticket text-orange"
+                                                        data-toggle="tooltip" data-original-title="SD Content!"></i> SD Content
                                                 </span>
                                             @endif
                                     </td>
@@ -263,27 +263,27 @@
                                         </time>
                                     </td>
                                     <td>
-                                        <span class='badge-extra text-blue text-bold'>
+                                        <span class="badge-extra text-blue text-bold">
                                             {{ $bookmark->getSize() }}
                                         </span>
                                     </td>
                                     <td>
                                         <a href="{{ route('peers', ['id' => $bookmark->id]) }}">
-                                            <span class='badge-extra text-green text-bold'>
+                                            <span class="badge-extra text-green text-bold">
                                                 {{ $bookmark->seeders }}
                                             </span>
                                         </a>
                                     </td>
                                     <td>
                                         <a href="{{ route('peers', ['id' => $bookmark->id]) }}">
-                                            <span class='badge-extra text-red text-bold'>
+                                            <span class="badge-extra text-red text-bold">
                                                 {{ $bookmark->leechers }}
                                             </span>
                                         </a>
                                     </td>
                                     <td>
                                         <a href="{{ route('history', ['id' => $bookmark->id]) }}">
-                                            <span class='badge-extra text-orange text-bold'>
+                                            <span class="badge-extra text-orange text-bold">
                                                 {{ $bookmark->times_completed }} @lang('common.times')
                                             </span>
                                         </a>

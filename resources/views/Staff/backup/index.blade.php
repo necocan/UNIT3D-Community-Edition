@@ -100,7 +100,7 @@
                 // do the backup through ajax
                 Toast.fire({
                     icon: 'success',
-                    title: '@lang('backup.backup_process_started')'
+                    title: "@lang('backup.backup_process_started')"
                 })
                 $.ajax({
                     url: create_backup_url,
@@ -110,14 +110,14 @@
                         if (result.indexOf('failed') >= 0) {
                             Toast.fire({
                                 icon: 'warning',
-                                title: '@lang('backup.create_warning_message')'
+                                title: "@lang('backup.create_warning_message')"
                             })
                         }
                         else
                         {
                             Toast.fire({
                                 icon: 'success',
-                                title: '@lang('backup.create_confirmation_message')'
+                                title: "@lang('backup.create_confirmation_message')"
                             })
                         }
                     },
@@ -131,7 +131,7 @@
                 // do the backup through ajax
                 Toast.fire({
                     icon: 'success',
-                    title: '@lang('backup.backup_process_started')'
+                    title: "@lang('backup.backup_process_started')"
                 })
                 $.ajax({
                     url: create_backup_url,
@@ -141,14 +141,14 @@
                         if (result.indexOf('failed') >= 0) {
                             Toast.fire({
                                 icon: 'warning',
-                                title: '@lang('backup.create_warning_message')'
+                                title: "@lang('backup.create_warning_message')"
                             })
                         }
                         else
                         {
                             Toast.fire({
                                 icon: 'success',
-                                title: '@lang('backup.create_confirmation_message')'
+                                title: "@lang('backup.create_confirmation_message')"
                             })
                         }
                     },
@@ -162,7 +162,7 @@
                 // do the backup through ajax
                 Toast.fire({
                     icon: 'success',
-                    title: '@lang('backup.backup_process_started')'
+                    title: "@lang('backup.backup_process_started')"
                 })
                 $.ajax({
                     url: create_backup_url,
@@ -172,14 +172,14 @@
                         if (result.indexOf('failed') >= 0) {
                             Toast.fire({
                                 icon: 'warning',
-                                title: '@lang('backup.create_warning_message')'
+                                title: "@lang('backup.create_warning_message')"
                             })
                         }
                         else
                         {
                             Toast.fire({
                                 icon: 'success',
-                                title: '@lang('backup.create_confirmation_message')'
+                                title: "@lang('backup.create_confirmation_message')"
                             })
                         }
                     },
@@ -199,7 +199,7 @@
                             // Show an alert with the result
                             Toast.fire({
                                 icon: 'success',
-                                title: '@lang('backup.delete_confirmation_message')'
+                                title: "@lang('backup.delete_confirmation_message')"
                             })
                             // delete the row from the table
                             delete_button.parentsUntil('tr').parent().remove();
@@ -208,14 +208,14 @@
                             // Show an alert with the result
                             Toast.fire({
                                 icon: 'warning',
-                                title: '@lang('backup.delete_error_title')'
+                                title: "@lang('backup.delete_error_title')"
                             })
                         }
                     });
                 } else {
                     Toast.fire({
                         icon: 'warning',
-                        title: '@lang('backup.delete_error_title')'
+                        title: "@lang('backup.delete_error_title')"
                     })
                 }
             });

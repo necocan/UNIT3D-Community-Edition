@@ -82,13 +82,13 @@
                                         </td>
                                         @if ($p->read == 0)
                                             <td class="col-sm-2">
-                                                <span class='label label-danger'>
+                                                <span class="label label-danger">
                                                     @lang('pm.unread')
                                                 </span>
                                             </td>
                                         @else ($p->read >= 1)
                                             <td class="col-sm-2">
-                                                <span class='label label-success'>
+                                                <span class="label label-success">
                                                     @lang('pm.read')
                                                 </span>
                                             </td>

@@ -42,37 +42,37 @@
                     <span class="badge-user" style=" width: 100%; background-color: rgba(0, 0, 0, 0.19);">
                         @if (config('torrent.download_check_page') == 1)
                             <a href="{{ route('download_check', ['id' => $torrent->id]) }}" role="button" class="btn btn-sm btn-success">
-                                <i class='{{ config("other.font-awesome") }} fa-download'></i> @lang('common.download')
+                                <i class="{{ config("other.font-awesome") }} fa-download"></i> @lang('common.download')
                             </a>
                         @else
                             <a href="{{ route('download', ['id' => $torrent->id]) }}" role="button" class="btn btn-sm btn-success">
-                                <i class='{{ config("other.font-awesome") }} fa-download'></i> @lang('common.download')
+                                <i class="{{ config("other.font-awesome") }} fa-download"></i> @lang('common.download')
                             </a>
                         @endif
                         @if (config('torrent.magnet') == 1)
                             <a href="magnet:?dn={{ $torrent->name }}&xt=urn:btih:{{ $torrent->info_hash }}&as={{ route('torrent.download.rsskey', ['id' => $torrent->id, 'rsskey' => $user->rsskey ]) }}&tr={{ route('announce', ['passkey' => $user->passkey]) }}&xl={{ $torrent->size }}" role="button" class="btn btn-sm btn-success">
-                                <i class='{{ config("other.font-awesome") }} fa-magnet'></i> @lang('common.magnet')
+                                <i class="{{ config("other.font-awesome") }} fa-magnet"></i> @lang('common.magnet')
                             </a>
                         @endif
 
                         @if ($torrent->tmdb != 0 && $torrent->category->no_meta == 0)
                             <a href="{{ route('torrents.similar', ['category_id' => $torrent->category_id, 'tmdb' => $torrent->tmdb]) }}" role="button" class="btn btn-sm btn-primary">
-                                <i class='{{ config("other.font-awesome") }} fa-file'></i> @lang('torrent.similar')
+                                <i class="{{ config("other.font-awesome") }} fa-file"></i> @lang('torrent.similar')
                             </a>
                         @endif
 
                         @if ($torrent->nfo != null)
                             <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#modal-10">
-                                <i class='{{ config("other.font-awesome") }} fa-file'></i> @lang('common.view') NFO
+                                <i class="{{ config("other.font-awesome") }} fa-file"></i> @lang('common.view') NFO
                             </button>
                         @endif
 
                         <a href="{{ route('comment_thanks', ['id' => $torrent->id]) }}" role="button" class="btn btn-sm btn-primary">
-                            <i class='{{ config("other.font-awesome") }} fa-heart'></i> @lang('torrent.quick-comment')
+                            <i class="{{ config("other.font-awesome") }} fa-heart"></i> @lang('torrent.quick-comment')
                         </a>
 
                         <a data-toggle="modal" href="#myModal" role="button" class="btn btn-sm btn-primary">
-                            <i class='{{ config("other.font-awesome") }} fa-file'></i>  @lang('torrent.show-files')
+                            <i class="{{ config("other.font-awesome") }} fa-file"></i>  @lang('torrent.show-files')
                         </a>
 
                         <bookmark :id="{{ $torrent->id }}" :state="{{ $torrent->bookmarked()  ? 1 : 0}}"></bookmark>
@@ -85,7 +85,7 @@
 
                         @if ($torrent->seeders <= 2)
                         <a href="{{ route('reseed', ['id' => $torrent->id]) }}" role="button" class="btn btn-sm btn-warning">
-                            <i class='{{ config("other.font-awesome") }} fa-envelope'></i> @lang('torrent.request-reseed')
+                            <i class="{{ config("other.font-awesome") }} fa-envelope"></i> @lang('torrent.request-reseed')
                         </a>
                         @endif
 
@@ -225,8 +225,8 @@
                                 <strong>@lang('common.moderation')</strong>
                             </td>
                             <td>
-                                <a href="{{ route('staff.moderation.approve', ['id' => $torrent->id]) }}" role='button'
-                                   class='btn btn-labeled btn-success btn-xs @if ($torrent->isApproved()) disabled @endif'>
+                                <a href="{{ route('staff.moderation.approve', ['id' => $torrent->id]) }}" role="button"
+                                   class="btn btn-labeled btn-success btn-xs @if ($torrent->isApproved()) disabled @endif">
                                     <i class="{{ config('other.font-awesome') }} fa-thumbs-up"></i> @lang('common.moderation-approve')
                                 </a>
 

@@ -11,7 +11,7 @@
                 <div class="modal-body text-center">
                     <p>@lang('request.enter-bp')</p>
                     <fieldset>
-                        <input type='hidden' tabindex='3' name='request_id' value='{{ $torrentRequest->id }}'>
+                        <input type="hidden" tabindex='3' name='request_id' value="{{ $torrentRequest->id }}">
                         <label>
                             <input class="form-control" type="number" tabindex="3" name='bonus_value' min='100' value="100">
                         </label>
@@ -27,8 +27,8 @@
                     <div class="btns">
                         <button type="button" class="btn btn-default"
                             data-dismiss="modal">@lang('common.cancel')</button>
-                        <button type="submit" @if ($user->seedbonus < 100) disabled title='@lang('
-                                request.dont-have-bps')' @endif class="btn btn-success">@lang('request.vote')</button>
+                        <button type="submit" @if ($user->seedbonus < 100) disabled title="@lang('
+                                request.dont-have-bps')" @endif class="btn btn-success">@lang('request.vote')</button>
                     </div>
                 </div>
             </form>
@@ -49,7 +49,7 @@
                 <div class="modal-body text-center">
                     <p>@lang('request.enter-hash').</p>
                     <fieldset>
-                        <input type='hidden' tabindex='3' name='request_id' value='{{ $torrentRequest->id }}'>
+                        <input type="hidden" tabindex='3' name='request_id' value="{{ $torrentRequest->id }}">
                         <label>
                             <input class="form-control" type="text" tabindex="3" name='info_hash'
                                 placeholder="@lang('request.torrent-hash')">

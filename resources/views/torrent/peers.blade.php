@@ -119,11 +119,11 @@
                                 <td>{{ $p->created_at ? $p->created_at->diffForHumans() : 'N/A' }}</td>
                                 <td>{{ $p->updated_at ? $p->updated_at->diffForHumans() : 'N/A' }}</td>
                                 <td> @if ($p->seeder == 0)
-                                        <span class='label label-danger'>{{ strtoupper(trans('torrent.leecher')) }}</span>
+                                        <span class="label label-danger">{{ strtoupper(trans('torrent.leecher')) }}</span>
                                     @elseif ($p->seeder == 1)
-                                        <span class='label label-success'>{{ strtoupper(trans('torrent.seeder')) }}</span>
+                                        <span class="label label-success">{{ strtoupper(trans('torrent.seeder')) }}</span>
                                     @else
-                                        <span class='label label-warning'>{{ strtoupper(trans('common.error')) }}</span>
+                                        <span class="label label-warning">{{ strtoupper(trans('common.error')) }}</span>
                                     @endif
                                 </td>
                             </tr>
